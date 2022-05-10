@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* body {
+  padding: 10px 10px;
+  margin: 0;
+  border: 0;
+  background-color: whitesmoke;
+  color: black;
+}
+* body .questions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  width: 1250px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  margin-right: 3px;
+  scroll-behavior: smooth;
+}
+* body .questions input {
+  border: none;
+  height: 50px;
+  width: 110px;
+  background-color: whitesmoke;
+  color: black;
+}
+* body .questions input:focus {
+  outline: none;
+  border: 1px solid green;
+}
+* body .questions button {
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 110px;
+  background-color: whitesmoke;
+  color: black;
+}
+* body .questions button:focus {
+  outline: none;
+  border: 1px solid green;
+}
+* body .questions select {
+  border: none;
+  height: 50px;
+  width: 110px;
+  background-color: whitesmoke;
+  color: black;
+}
+* body .questions select:focus {
+  outline: none;
+  border: 1px solid green;
+}
+* body .tables {
+  height: 30vh;
+}
+* th {
+  border: 1px solid green;
+}
+
+.profitable {
+  color: green;
+}/*# sourceMappingURL=style.css.map */

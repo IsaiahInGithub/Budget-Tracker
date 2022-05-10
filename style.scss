@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+    @mixin oultineRemover {
+        &:focus {
+            outline: none;
+            border: 1px solid green;
+        }
+    }
+
+    @mixin styling {
+        height: 50px;
+        width: 110px;
+        background-color: whitesmoke;
+        color: black;
+    }
+
+    body {
+        padding: 10px 10px;
+        margin: 0;
+        border: 0;
+        background-color: whitesmoke;
+        color: black;
+
+            .questions {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                height: 80px;
+                width: 1250px;
+                background-color: #fff;
+                color: #000;
+                border-radius: 10px;
+                margin-right: 3px;
+                scroll-behavior: smooth;
+
+                input {
+                    border: none;
+                    @include oultineRemover();
+                    @include styling();
+                }
+
+                button {
+                    border: none;
+                    cursor: pointer;
+                    @include oultineRemover();
+                    @include styling();
+                }
+
+                select {
+                    border: none;  
+                    @include oultineRemover();
+                    @include styling();       
+                }
+        }
+
+        .tables {
+            height: 30vh;
+        }
+    };
+
+    th {
+        border: 1px solid green;
+    }
+}
+
+.profitable {
+    color: green;
+}
