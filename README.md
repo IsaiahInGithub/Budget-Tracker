@@ -8,7 +8,7 @@ Still under construction.
 
 # Timeline
 
-Started date - 8th of April
+Start date - 8th of April
 
 Around the 10th of April - In the first version there was almost no styling, no way to know to know the total income or total expense, no way to know how much your profit or loss was and finally no database of any sort. It is also called Pound Tracker now.
 
