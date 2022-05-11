@@ -1,4 +1,4 @@
-# Pound-Tracker
+# Budget-Tracker
 
 A simple website which tracks your incomes/expenses.
 
