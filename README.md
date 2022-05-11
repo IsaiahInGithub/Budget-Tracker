@@ -20,4 +20,4 @@ Around the 11 of May 2022
 
 There is a database working fine, a good green theme and the name was changed from Pound Tracker to Budget Tracker
 
-# Thank you for reading!
+Thank you for reading!
