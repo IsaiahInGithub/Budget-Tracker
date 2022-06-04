@@ -1,104 +1,68 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Budget Tracker</title>
-    </head>
-    <body>
-    <h1>Budget Tracker</h1>
-    <div class="questions">
-    <h3>Date</h3>
-    <input type="date" class="date">
-    <h3>Income/Expense</h3>
-    <select class="dropdown-one">
-    <option>Income</option>
-    <option selected>Expense</option>
-    </select>
-    <h3>Desciption</h3>
-    <input type="text" placeholder="Description" class="input-one">
-    <h3>Type</h3>
-    <select class="dropdown-two">
-    <option>Transport</option>
-    <option>Essentials</option>
-    <option>Food</option>
-    <option>Medical</option>
-    <option>Kids</option>
-    <option>Loan</option>
-    <option>Salary</option>
-    <option>Other Income</option>
-    <option>Clothes</option>
-    <option>Rent</option>
-    <option>Utilities</option>
-    <Option>Education</Option>
-    <option>Eating Out</option>
-    <option>Miscellaneous</option>
-    </select>
-    <h3>Amount</h3>
-    <input type="number" min="0" value="00.00" step="0.01" class="input-two">
-    <button class="read" onfocus="addTable();">Submit</button>
-    </div>
-    <br>
-    <div class="tables" style="max-height: 30vh; overflow-y: scroll;">
-    <table style="width: 1250px; margin-bottom: 5vh;">
-    <tr>
-        <th>Income/Expense</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Amount</th>
-        <th>Date</th>
-    </tr>
-    </table>
-    </div>
-    <h3 class="total-income">Total Income (in pounds): <span class="valueOne" style="color: green;"
-    >0</span></h3>
-    <h3 class="total-expense">Total Expense (in pounds): <span class="valueTwo"
-    style="color: green;">0</span></h3>
-    <h3>Profit/Loss (in pounds): <span class="profitable">None</span></h3>
-    <script src="script.js" defer></script>
-    <script type="module">
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
-    import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
-    import { doc, setDoc } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
-    import { onSnapshot } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+<title>Budget Tracker</title>
+</head>
+<body>
+<h1>Budget Tracker</h1>
+<div class="questions">
+<h3>Date</h3>
+<input type="date" class="date">
+<h3>Income/Expense</h3>
+<select class="dropdown-one">
+<option>Income</option>
+<option selected>Expense</option>
+</select>
+<h3>Desciption</h3>
+<input type="text" placeholder="Description" class="input-one">
+<h3>Type</h3>
+<select class="dropdown-two">
+<option>Transport</option>
+<option>Essentials</option>
+<option>Food</option>
+<option>Medical</option>
+<option>Kids</option>
+<option>Loan</option>
+<option>Salary</option>
+<option>Other Income</option>
+<option>Clothes</option>
+<option>Rent</option>
+<option>Utilities</option>
+<Option>Education</Option>
+<option>Eating Out</option>
+<option>Miscellaneous</option>
+</select>
+<h3>Amount</h3>
+<input type="number" min="0" value="00.00" step="0.01" class="input-two">
+<button class="read" onfocus="addTable();">Submit</button>
+</div>
+<br>
+<div class="tables" style="max-height: 30vh; overflow-y: scroll;">
+<table style="width: 1250px; margin-bottom: 5vh;">
+<tr>
+    <th>Date</th>
+    <th>Income/Expense</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Amount</th>
+</tr>
+</table>
+</div>
+<!-- <h3 class="total-income" style="color: #005657;">Total Income (in pounds): <span 
+    class="valueOne" style="color: darkcyan;"
+>0</span></h3>
+<h3 class="total-expense" style="color: #005657;">Total Expense (in pounds): <span 
+    class="valueTwo"
+style="color: darkcyan;">0</span></h3>
+<h3 class="profit-loss" style="color: #005657;">Profit/Loss (in pounds): <span 
+    class="profitable">None</span></h3> -->
+<script src="./script.js"></script>
+<script type="module" src="./firebase.js"></script>
+</body>
 
-    let x = null;
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyDhFv2NYy9kboVmAUKZ5aizlhEA-HGRGKM",
-        authDomain: "budget-tracker-66929.firebaseapp.com",
-        projectId: "budget-tracker-66929",
-        storageBucket: "budget-tracker-66929.appspot.com",
-        messagingSenderId: "112765358128",
-        appId: "1:112765358128:web:6568b13a0b81ec36da9df5",
-        measurementId: "G-MNS15VVXY7"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-
-    onSnapshot(doc(db, 'New Table Row', 'HTML'), (doc) => {
-    document.querySelector('table').innerHTML = doc.data().Code;
-    document.querySelector('.profitable').innerHTML = doc.data().Profit_or_loss;
-    document.querySelector('.valueOne').innerHTML = doc.data().Income;
-    document.querySelector('.valueTwo').innerHTML = doc.data().Expense;
-    console.log(doc.data().Code, doc.data().Profit_or_loss, doc.data().Income, doc.data().Expense);
-    });
-
-    document.querySelector('.read').onclick = function() {
-    setDoc(doc(db, `New Table Row`, 
-    `HTML`), {
-    Code: document.querySelector('table').innerHTML,
-    Profit_or_loss: document.querySelector('.profitable').innerHTML,
-    Income: document.querySelector('.valueOne').innerHTML,
-    Expense: document.querySelector('.valueTwo').innerHTML,
-    });
-    };
-    
-    </script>
-    </body>
-
-    </html>
+</html>
