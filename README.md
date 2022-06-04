@@ -24,4 +24,6 @@ Around the 19th of May 2022
 
 An attempt to use localStorage was made which failed. A great darkcyan theme has been implemented instead of the green theme.
 
+Around the 4th of June 2022, I removed the total income, total expense and profit/loss features from the app due to a few errors in the web app, minor changes to the styling whre also made.
+
 Thank you for reading!
