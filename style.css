@@ -9,6 +9,10 @@
   background-color: whitesmoke;
   color: black;
 }
+* body h1 {
+  color: #007571;
+  font-family: cursive;
+}
 * body .questions {
   display: flex;
   align-items: center;
@@ -16,8 +20,8 @@
   height: 80px;
   width: 1250px;
   background-color: #fff;
-  color: #000;
-  border-radius: 10px;
+  color: darkcyan;
+  font-size: small;
   margin-right: 3px;
   scroll-behavior: smooth;
 }
@@ -30,7 +34,7 @@
 }
 * body .questions input:focus {
   outline: none;
-  border: 1px solid green;
+  border: 1px solid darkcyan;
 }
 * body .questions button {
   border: none;
@@ -42,7 +46,7 @@
 }
 * body .questions button:focus {
   outline: none;
-  border: 1px solid green;
+  border: 1px solid darkcyan;
 }
 * body .questions select {
   border: none;
@@ -53,15 +57,20 @@
 }
 * body .questions select:focus {
   outline: none;
-  border: 1px solid green;
+  border: 1px solid darkcyan;
+}
+* body .profitable {
+  color: darkcyan;
+}
+* body .profitable, * body .valueOne, * body .valueTwo {
+  font-size: large;
 }
 * body .tables {
   height: 30vh;
+  color: #007070;
 }
-* th {
-  border: 1px solid green;
-}
-
-.profitable {
-  color: green;
+* body th {
+  border: 1px solid #007070;
+  font-size: small;
+  color: #007070;
 }/*# sourceMappingURL=style.css.map */
