@@ -5,7 +5,7 @@
     @mixin oultineRemover {
         &:focus {
             outline: none;
-            border: 1px solid green;
+            border: 1px solid darkcyan;
         }
     }
 
@@ -23,6 +23,11 @@
         background-color: whitesmoke;
         color: black;
 
+            h1 {
+                color: #007571;
+                font-family: cursive;
+            }
+
             .questions {
                 display: flex;
                 align-items: center;
@@ -30,8 +35,8 @@
                 height: 80px;
                 width: 1250px;
                 background-color: #fff;
-                color: #000;
-                border-radius: 10px;
+                color: darkcyan;
+                font-size: small;
                 margin-right: 3px;
                 scroll-behavior: smooth;
 
@@ -51,20 +56,27 @@
                 select {
                     border: none;  
                     @include oultineRemover();
-                    @include styling();       
+                    @include styling();
                 }
+        }
+
+        .profitable {
+            color: darkcyan;
+        }
+
+        .profitable, .valueOne, .valueTwo {
+            font-size: large;
         }
 
         .tables {
             height: 30vh;
+            color: #007070;
+        }
+
+        th {
+            border: 1px solid #007070;
+            font-size: small;
+            color: #007070;
         }
     };
-
-    th {
-        border: 1px solid green;
-    }
-}
-
-.profitable {
-    color: green;
 }
