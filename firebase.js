@@ -4,13 +4,13 @@ import { doc, setDoc } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-f
 import { onSnapshot } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
 
 const firebaseConfig = {
-apiKey: "AIzaSyDhFv2NYy9kboVmAUKZ5aizlhEA-HGRGKM",
-authDomain: "budget-tracker-66929.firebaseapp.com",
-projectId: "budget-tracker-66929",
-storageBucket: "budget-tracker-66929.appspot.com",
-messagingSenderId: "112765358128",
-appId: "1:112765358128:web:6568b13a0b81ec36da9df5",
-measurementId: "G-MNS15VVXY7"
+    apiKey: "AIzaSyAYiqfOD7QUAODkdCs4vNdW3igXDkmt2J0",
+    authDomain: "budget-88689.firebaseapp.com",
+    projectId: "budget-88689",
+    storageBucket: "budget-88689.appspot.com",
+    messagingSenderId: "140860831514",
+    appId: "1:140860831514:web:428b9b9bc160f95bd79ea3",
+    measurementId: "G-ZYQW1B54N7"
 };
 
 const app = initializeApp(firebaseConfig);
